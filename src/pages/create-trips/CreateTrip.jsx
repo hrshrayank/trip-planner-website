@@ -247,7 +247,7 @@ export const CreateTrip = () => {
           <DialogContent>
             <DialogHeader>
               <DialogDescription>
-                <img src="/logo.svg" />
+                <img src="/logo.png" />
                 <h2 className="font-bold text-lg mt-7">Sign In with Google</h2>
                 <p> Sign In to the App with Google authentication </p>
                 <Button

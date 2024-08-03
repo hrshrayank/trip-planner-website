@@ -57,12 +57,12 @@ export const Navbar = () => {
       <div>
         {user ? (
           <div className="flex justify-center items-center gap-3">
-            <Link to={'/create-trip'}>
+            <Link to={"/create-trip"}>
               <Button variant="outline" className="rounded-full">
                 Create Trips
               </Button>
             </Link>
-            <Link to={'/my-trips'}>
+            <Link to={"/my-trips"}>
               <Button variant="outline" className="rounded-full">
                 My Trips
               </Button>
@@ -88,26 +88,30 @@ export const Navbar = () => {
             </Popover>
           </div>
         ) : (
-          <Button onClick={() => setOpenDailog(true)}>Sign In</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button>Sign In</Button>
+            </DialogTrigger>
+            <DialogContent>
+              <DialogHeader>
+                <DialogDescription>
+                  <img src="/logo.png" />
+                  <h2 className="font-bold text-lg mt-7">
+                    Sign In with Google
+                  </h2>
+                  <p> Sign In to the App with Google authentication </p>
+                  <Button
+                    className="w-full mt-5 flex items-center gap-2 "
+                    onClick={handleLogin}
+                  >
+                    <FcGoogle className="h-5 w-5" /> Sign In with Google
+                  </Button>
+                </DialogDescription>
+              </DialogHeader>
+            </DialogContent>
+          </Dialog>
         )}
       </div>
-      <Dialog open={openDailog}>
-        <DialogContent>
-          <DialogHeader>
-            <DialogDescription>
-              <img src="/logo.svg" />
-              <h2 className="font-bold text-lg mt-7">Sign In with Google</h2>
-              <p> Sign In to the App with Google authentication </p>
-              <Button
-                className="w-full mt-5 flex items-center gap-2 "
-                onClick={handleLogin}
-              >
-                <FcGoogle className="h-5 w-5" /> Sign In with Google
-              </Button>
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
     </div>
   );
 };
