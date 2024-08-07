@@ -52,11 +52,11 @@ export const Navbar = () => {
   return (
     <div className="p-3 shadow-sm flex justify-between items-center px-5">
       <Link to={"/"}>
-        <img src="/logo.png" />
+        <img src="/mainlogo.png" className="w-28 md:w-40" />
       </Link>
       <div>
         {user ? (
-          <div className="flex justify-center items-center gap-3">
+          <div className="flex justify-center items-center gap-1 md:gap-3">
             <Link to={"/create-trip"}>
               <Button variant="outline" className="rounded-full">
                 Create Trips
@@ -95,7 +95,7 @@ export const Navbar = () => {
             <DialogContent>
               <DialogHeader>
                 <DialogDescription>
-                  <img src="/logo.png" />
+                  <img src="/mainlogo.png" className="w-28 md:w-40" />
                   <h2 className="font-bold text-lg mt-7">
                     Sign In with Google
                   </h2>

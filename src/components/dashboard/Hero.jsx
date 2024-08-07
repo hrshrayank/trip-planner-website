@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
-    <div className="flex flex-col items-center mx-56 gap-9 mt-16">
+    <div className="flex flex-col items-center mx-10 md:mx-56 gap-9 mt-16">
       <h1 className="font-extrabold text-4xl text-center">
-        <span className="text-red-500">
+        <span className="text-red-500 ">
           Discover Your Next Adventure with AI:
         </span>{" "}
         Personalized Itineraries at Your Fingertips
